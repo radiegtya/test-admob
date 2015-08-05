@@ -23,4 +23,19 @@ button.on("select", function() {
   });
 });
 
+var buttonConfirm = tabris.create("Button", {
+    layoutData: {left: 10, top: [button, 10], right: 10},
+    text: "Show Confirm Dialog"
+  }).appendTo(page).on("select", function() {
+    navigator.notification.confirm(
+        "You are the winner!", // message
+         function(buttonIndex) {
+           textView.set("text", "Confirm closed with code: " + buttonIndex);
+         }, // callback to invoke with index of button pressed
+        "Game Over", // title
+        ["Restart", "Exit"] // buttonTextViews
+    );
+  });
+
+
 page.open();

@@ -7,5 +7,5 @@
   <author email="dev@tabrisjs.com" href="https://tabrisjs.com">
    Tabris.js Team
   </author>
-   <plugin name="com.google.cordova.admob"/>
+   <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
 </widget>
